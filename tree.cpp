@@ -27,7 +27,7 @@ int main()
      
       
      
-        print_tree(root);
+        pre_order(root);
 
 
 
