@@ -3,7 +3,7 @@
 int main()
 {
      
-     Node* root=createnode(1);
+     Node* root=createnode(1);  //root
 
       root->right=createnode(3);
       root->left=createnode(2);
@@ -16,15 +16,9 @@ int main()
 
      root->left->right->right=createnode(11);
      root->left->right->left=createnode(10);
-   ///
-
 
      root->right->left=createnode(6);
-     root->right->right=createnode(7);
-
-
-    
-     
+     root->right->right=createnode(7);    
 
      root->right->left->right=createnode(13);
      root->right->right->left=createnode(14);
