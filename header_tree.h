@@ -20,7 +20,7 @@ Node* createnode(int data)
 
 }
 
-void print_tree(Node* root)
+void pre_order(Node* root)
 {
       if(root==nullptr)
       return;
