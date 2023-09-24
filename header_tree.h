@@ -10,6 +10,7 @@ Node* right;
 
 
 };
+
 Node* createnode(int data)
 {
     Node* newnode=new Node();
@@ -17,7 +18,6 @@ Node* createnode(int data)
      newnode->left=nullptr;
      newnode->right=nullptr;
     return newnode;
-
 }
 
 void pre_order(Node* root)
@@ -28,7 +28,4 @@ void pre_order(Node* root)
       cout<<root->data<<" ";
         printtree(root->left);
          printtree(root->right);
-
-
-
 }
