@@ -2,7 +2,7 @@
 
 int main()
 {
-     
+    // pre order
      Node* root=createnode(1);  //root
 
       root->right=createnode(3);
