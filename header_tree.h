@@ -26,6 +26,6 @@ void pre_order(Node* root)
       return;
 
       cout<<root->data<<" ";
-        printtree(root->left);
-         printtree(root->right);
+        pre_order(root->left);
+         pre_order(root->right);
 }
