@@ -23,12 +23,12 @@ int main()
      root->right->left->right=createnode(13);
      root->right->right->left=createnode(14);
 
-
-     
-      
-     
+    
         pre_order(root);
-
+ cout << endl;
+    in_order(root);
+    cout << endl;
+    post_order(root);
 
 
     return 0;
