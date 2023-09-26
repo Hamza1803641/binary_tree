@@ -1,3 +1,4 @@
+
 #include<iostream>
 using namespace std;
 
@@ -40,4 +41,16 @@ void in_order(Node* root)
     cout << root->data << " ";
     pre_order(root->right);
 }
+//pre_order
 
+
+void post_order(Node* root)
+{
+    if (root == nullptr)
+        return;
+
+    pre_order(root->left);
+    pre_order(root->right);
+    cout << root->data << " ";
+
+}
