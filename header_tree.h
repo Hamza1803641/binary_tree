@@ -1,56 +1,95 @@
-
 #include<iostream>
 using namespace std;
 
 class Node
 {
 public:
-int data;
-Node* left;
-Node* right;
-
+    int data;
+    Node* left;
+    Node* right;
 
 };
 
-Node* createnode(int data)
+class MyTree 
 {
-    Node* newnode=new Node();
-     newnode->data=data;
-     newnode->left=nullptr;
-     newnode->right=nullptr;
-    return newnode;
-}
+    Node* root;
 
-void pre_order(Node* root)
-{
-      if(root==nullptr)
-      return;
+    void Inorder(Node* root)
+    {
+        if (root == nullptr)
+            return;
 
-      cout<<root->data<<" ";
-        pre_order(root->left);
-         pre_order(root->right);
-}
+        Inorder(root->left);
+        cout << root->data << " ";
+        Inorder(root->right);
+    }
+    
+    void Preorder(Node* root)
+    {
+        if (root == nullptr)
+            return;
+    
+        cout << root->data << " ";
+        Preorder(root->left);
+        Preorder(root->right);
+    }
 
-//in_order
-void in_order(Node* root)
-{
-    if (root == nullptr)
-        return;
-
-    pre_order(root->left);
-    cout << root->data << " ";
-    pre_order(root->right);
-}
-//post_order
+    void Postorder(Node* root)
+    {
+        if (root == nullptr)
+            return;
+    
+        Postorder(root->left);
+        Postorder(root->right);
+        cout << root->data << " ";
+    }
 
 
-void post_order(Node* root)
-{
-    if (root == nullptr)
-        return;
+    void Insert(int value,Node*& root)
+    {
 
-    pre_order(root->left);
-    pre_order(root->right);
-    cout << root->data << " ";
+        if (root == nullptr)
+        {
+            root = new Node;
+            root->data = value;
+            root->left = nullptr;
+            root->right = nullptr;
+        }
+        else if (value < root->data)
+        {
+            Insert(value, root->left);
+                
+        }                  
+        else if (value >= root->data)
+        {                  
+            Insert(value, root->right);
 
-}
+        }
+    }
+
+public:
+    MyTree()
+    {
+        root = nullptr;
+    }
+
+    void insert(int Data)
+    {
+        Insert(Data,root);
+    }
+
+    void inorder()
+    {
+        Inorder(root);
+    }
+    
+    void preorder()
+    {
+        Preorder(root);
+    }
+
+    void postorder()
+    {
+        Postorder(root);
+    }
+};
