@@ -29,3 +29,15 @@ void pre_order(Node* root)
         pre_order(root->left);
          pre_order(root->right);
 }
+
+//in_order
+void in_order(Node* root)
+{
+    if (root == nullptr)
+        return;
+
+    pre_order(root->left);
+    cout << root->data << " ";
+    pre_order(root->right);
+}
+
