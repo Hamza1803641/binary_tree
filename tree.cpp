@@ -2,35 +2,23 @@
 
 int main()
 {
-    // pre order
-     Node* root=createnode(1);  //root
+    MyTree obj;
 
-      root->right=createnode(3);
-      root->left=createnode(2);
-      
-     root->left->left=createnode(4);
-     root->left->right=createnode(5);
-     
-        root->left->left->left=createnode(8);
-     root->left->left->right=createnode(9);
+    obj.insert(10);
+    obj.insert(20);
 
-     root->left->right->right=createnode(11);
-     root->left->right->left=createnode(10);
+    obj.insert(5);
+    obj.insert(30);
+    obj.insert(4);
+    obj.insert(40);
 
-     root->right->left=createnode(6);
-     root->right->right=createnode(7);    
-
-     root->right->left->right=createnode(13);
-     root->right->right->left=createnode(14);
-
-    
-        pre_order(root);
- cout << endl;
-    in_order(root);
+    obj.inorder();
     cout << endl;
-    post_order(root);
 
+    obj.preorder();
+    cout << endl;
 
+    obj.postorder();
     return 0;
 
 }
