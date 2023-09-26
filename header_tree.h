@@ -41,7 +41,7 @@ void in_order(Node* root)
     cout << root->data << " ";
     pre_order(root->right);
 }
-//pre_order
+//post_order
 
 
 void post_order(Node* root)
