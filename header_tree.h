@@ -67,6 +67,29 @@ class MyTree
         }
     }
 
+//for find mini minimum element like second minimum
+	void MINI(Node* r,bool& flag,int sm)
+	{
+		static int s = 0;
+		if (r == nullptr)
+			return;
+		
+		MINI(r->left,flag,sm);
+		if (root->Data < sm)
+		{
+			sm = root->Data;
+		}
+		s++;
+		if (s == sm)
+		{
+			flag = true;
+			cout <<" smallest" << r->Data;
+			return;
+		}
+
+		MINI(r->right, flag, sm);
+	}
+
 public:
     MyTree()
     {
@@ -92,4 +115,14 @@ public:
     {
         Postorder(root);
     }
+
+    void max_min(int value)
+	{
+	    bool flag = false;
+		MAX_MIN(root,flag,value);
+	}
+
+
+
+
 };
