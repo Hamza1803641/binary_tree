@@ -116,10 +116,10 @@ public:
         Postorder(root);
     }
 
-    void max_min(int value)
+    void min(int value)
 	{
 	    bool flag = false;
-		MAX_MIN(root,flag,value);
+            MINI(root,flag,value);
 	}
 
 
