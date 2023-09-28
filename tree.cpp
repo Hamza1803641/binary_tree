@@ -19,6 +19,12 @@ int main()
     cout << endl;
 
     obj.postorder();
+
+    //FOR find  minimum like sec minimum in tree 
+    obj.max_min(4);
+
+
+    
     return 0;
 
 }
