@@ -21,7 +21,7 @@ int main()
     obj.postorder();
 
     //FOR find  minimum like sec minimum in tree 
-    obj.max_min(4);
+    obj.min(4);
 
 
     
